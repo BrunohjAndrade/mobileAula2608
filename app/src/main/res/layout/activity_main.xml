@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lCalcIMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculo IMC"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/lPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Peso"
+        android:textSize="24sp"
+        android:layout_below="@id/lCalcIMC"/>
+
+    <TextView
+        android:id="@+id/lAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Altura"
+        android:textSize="24sp"
+        android:layout_below="@id/lPeso"/>
+
+    <EditText
+        android:id="@+id/ePeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lPeso"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="0dp"
+        android:layout_toRightOf="@id/lPeso"
+        android:ems="10"
+        android:hint="Peso em KG"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/eAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lAltura"
+        android:layout_alignBaseline="@id/lAltura"
+        android:layout_toRightOf="@id/lAltura"
+        android:ems="10"
+        android:hint="Altura em metros"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/IMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IMC"
+        android:textSize="24sp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/eAltura"
+        android:hint="IMC"/>
+
+    <Button
+        android:id="@+id/calcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular IMC"
+        android:textSize="14sp"
+        android:layout_below="@id/IMC"
+        android:layout_centerInParent="true"
+        android:onClick="calcularIMC"/>
+
+    <Button
+        android:id="@+id/Creditos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Creditos"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="abrirCreditos"/>
+</RelativeLayout>
